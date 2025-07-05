@@ -45,12 +45,12 @@ export const Card = styled.div<{ variant?: 'primary' | 'secondary' }>`
   box-shadow: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
 
   animation: ${({ variant }) =>
-    variant === 'secondary' ? fadeInUp : 'none'} 0.8s ease forwards;
+    variant === 'secondary' || variant === 'primary'? fadeInUp : 'none'} 0.8s ease forwards;
 
   @media (max-width: 600px) {
     max-width: 90vw;

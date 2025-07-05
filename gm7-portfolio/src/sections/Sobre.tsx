@@ -4,7 +4,7 @@ import { Section, Card, Title, Paragraph, ContactItem, IconLink, ButtonGroup, Bu
 
 export default function Sobre() {
   return (
-    <Section>
+    <Section id="sobre">
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: 500, width: '100%' }}>
         <Card variant="primary" style={{ paddingBottom: '1rem' }}>
           <Title>Desenvolvedor<br />Mobile e Web<br />Full Stack</Title>
