@@ -54,5 +54,8 @@ export const MenuButton = styled.button`
   font-size: 1.25rem; /* text-xl */
   background: none;
   border: none;
+  display: flex;
+  align-items: center; 
+  gap: 8px;            
   cursor: pointer;
 `;

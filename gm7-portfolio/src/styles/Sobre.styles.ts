@@ -4,20 +4,21 @@ import styled, { keyframes } from 'styled-components';
 
 export const Section = styled.section`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh; // Altura mínima de uma tela inteira
   background-color: #333D29;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  padding: 2rem;
 
   @media (max-width: 600px) {
     flex-direction: column;
-    height: auto;       // altura flexível para caber conteúdo
-    padding: 2rem 1rem; // um padding para não colar na borda da tela
+    padding: 2rem 1rem;
   }
 `;
+
 
 
 
@@ -34,13 +35,12 @@ const fadeInUp = keyframes`
   }
 `;
 // Card com animação
-export const Card = styled.div<{ variant?: 'primary' | 'secondary' }>`
+
+export const Card = styled.div`
   width: 100%;
   max-width: 500px;
   padding: 1.5rem;
   
-  background-color: ${({ variant }) =>
-    variant === 'secondary' ? '#C2C5AA' : '#333D29'};
   border-radius: 0.75rem;
   box-shadow: none;
   display: flex;
@@ -49,8 +49,7 @@ export const Card = styled.div<{ variant?: 'primary' | 'secondary' }>`
   align-items: start;
   text-align: start;
 
-  animation: ${({ variant }) =>
-    variant === 'secondary' || variant === 'primary'? fadeInUp : 'none'} 0.8s ease forwards;
+  animation: ${fadeInUp} 1.5s ease forwards;
 
   @media (max-width: 600px) {
     max-width: 90vw;
@@ -59,26 +58,28 @@ export const Card = styled.div<{ variant?: 'primary' | 'secondary' }>`
 `;
 
 
-
-
 export const Title = styled.h1<{ color?: string; size?: string }>`
   font-size: ${({ size }) => size || '4.6875rem'};
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 10px;
+
   color: ${({ color }) => color || '#B6AD90'};
   margin-bottom: 1rem;
 
   @media (max-width: 600px) {
     font-size: ${({ size }) =>
-      size ? `calc(${size} / 2)` : '2.5rem'}; // diminui pela metade ou define 2.5rem
+      size ? `calc(${size} / 2)` : '2.5rem'}; 
   }
 `;
 
 export const Paragraph = styled.p<{ color?: string }>`
-  font-size: 30px;
+  font-size: 24px;
   color: ${({ color }) => color || '#A4AC86'};
   line-height: 1.5;
+  // letter-spacing: 3px;
 
-  @media (max-width: 600px) {
+
+  @media (max-width: 800px) {
     font-size: 18px;
   }
 `;
@@ -110,9 +111,13 @@ export const ButtonGroup = styled.div`
   gap: 1rem;
   margin-top: 2rem;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     gap: 0.75rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 `;
 

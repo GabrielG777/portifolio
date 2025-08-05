@@ -20,6 +20,7 @@ const TopoFixo: React.FC = () => {
         </div>
       </Profile>
       <MenuButton>
+        <Name>MENU</Name>
         <FaBars />
       </MenuButton>
     </Container>

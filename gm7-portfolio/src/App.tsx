@@ -1,4 +1,5 @@
 import TopoFixo from './components/TopoFixo';
+import Projetos from './sections/Projetos';
 import Sobre from './sections/Sobre';
 
 export default function App() {
@@ -7,6 +8,7 @@ export default function App() {
       <TopoFixo />
       <main className="pt-24">
         <Sobre />
+        <Projetos/>
       </main>
     </div>
   );
