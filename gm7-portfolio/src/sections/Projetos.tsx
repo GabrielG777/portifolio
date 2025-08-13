@@ -1,4 +1,5 @@
 import { Section, Titulo, Container, ContainerWrapper } from '../styles/Projetos.styles';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 export default function Projetos() {
   return (
@@ -18,10 +19,32 @@ export default function Projetos() {
 
         <ContainerWrapper>
           <Container>
-            <p>Container 1</p>
+            <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+              <button onClick={() => alert('Voltar acadêmico')}>
+                <FaArrowLeft size={24} />
+              </button>
+              <div style={{ flex: 1, textAlign: 'center' }}>
+                <p>Acadêmicos</p>
+              </div>
+              <button onClick={() => alert('Avançar acadêmico')}>
+                <FaArrowRight size={24} />
+              </button>
+            </div>
           </Container>
+
           <Container>
-            <p>Container 2</p>
+            <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+              <button onClick={() => alert('Voltar profissional')}>
+                <FaArrowLeft size={24} />
+              </button>
+              <div style={{ flex: 1, textAlign: 'center' }}>
+
+                <p>Profissionais</p>
+              </div>
+              <button onClick={() => alert('Voltar profissional')}>
+                <FaArrowRight size={24} />
+              </button>
+            </div>
           </Container>
         </ContainerWrapper>
       </div>

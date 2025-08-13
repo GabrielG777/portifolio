@@ -18,10 +18,11 @@ export const Section = styled.section`
 
 export const Titulo = styled.h2`
   color: #333D29;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
   padding: 1rem 0;
+
 
   @media (max-width: 600px) {
     font-size: 1.5rem;
