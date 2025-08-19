@@ -1,4 +1,4 @@
-import styled, { } from 'styled-components';
+  import styled, { } from 'styled-components';
 
 export const Section = styled.section`
   width: 100%;
@@ -27,7 +27,6 @@ export const Titulo = styled.h2`
   @media (max-width: 600px) {
     font-size: 1.5rem;
   }
-  
 `;
 
 // ContainerWrapper: "row" com espaçamento igual dos lados
